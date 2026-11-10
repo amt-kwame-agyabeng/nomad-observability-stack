@@ -1,0 +1,23 @@
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.vars.hcl
+*.var
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
