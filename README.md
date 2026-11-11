@@ -527,3 +527,13 @@ This project demonstrates an integrated monitoring and centralized logging solut
 Prometheus collects host-level metrics exposed by Node Exporter, while Grafana Alloy discovers Docker containers and forwards their logs to Loki. Grafana provides a unified interface for monitoring system performance and investigating application logs.
 
 The completed lab provides a practical foundation that can be extended to monitor additional containerized services and support more advanced observability practices.
+
+# Supporting Documentation
+
+This bundle contains the supporting documentation for the Nomad observability project.
+
+- [Architecture Guide](docs/architecture.md)
+- [Deployment Guide](docs/deployment-guide.md)
+- [Configuration Guide](docs/configuration-guide.md)
+- [Troubleshooting Guide](docs/troubleshooting.md)
+- [Command Reference](docs/command-reference.md)
