@@ -33,14 +33,16 @@ job "prometheus" {
         image = "prom/prometheus:v3.2.1"
         ports = ["prometheus"]
 
-        volumes = [
-  "/home/kwamzzy/projects/nomad-observability-stack/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+  volumes = [
+  "/mnt/c/Users/Admin/Desktop/nomad-observability-stack/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
 ]
 
         args = [
           "--config.file=/etc/prometheus/prometheus.yml",
           "--storage.tsdb.path=/prometheus",
-          "--web.enable-lifecycle"
+          "--web.enable-lifecycle",
+          "--web.enable-remote-write-receiver"
+
         ]
       }
 

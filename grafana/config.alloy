@@ -27,3 +27,29 @@ loki.write "local" {
     url = "http://172.18.49.163:3100/loki/api/v1/push"
   }
 }
+
+
+prometheus.scrape "nomad" {
+  targets = [
+    {
+      "__address__" = "127.0.0.1:4646",
+    },
+  ]
+
+  metrics_path = "/v1/metrics"
+
+  params = {
+    "format" = ["prometheus"],
+  }
+
+  forward_to = [
+    prometheus.remote_write.prometheus.receiver,
+  ]
+}
+
+// Forward metrics to Prometheus
+prometheus.remote_write "prometheus" {
+  endpoint {
+    url = "http://172.18.49.163:9090/api/v1/write"
+  }
+}

@@ -13,7 +13,7 @@ job "alloy" {
       driver = "docker"
 
       env {
-        ALLOY_CONFIG_REVISION = "2"
+        ALLOY_CONFIG_REVISION = "3"
       }
 
       config {
@@ -29,8 +29,7 @@ job "alloy" {
 
         volumes = [
           "/var/run/docker.sock:/var/run/docker.sock",
-          "/home/kwamzzy/projects/nomad-observability-stack/grafana/config.alloy:/etc/alloy/config.alloy"
-        ]
+          "/mnt/c/Users/Admin/Desktop/nomad-observability-stack/grafana/config.alloy:/etc/alloy/config.alloy"        ]
       }
 
       resources {
